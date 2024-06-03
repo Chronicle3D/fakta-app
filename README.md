@@ -15,15 +15,11 @@ En enkel webbapplikation som listar 10 fakta lagrade i en MongoDB-databas.
 - Databas: MongoDB för flexibilitet och enkel integration med Node.js via Mongoose.
 - Docker: För att containerisera applikationen och dess beroenden för enkel distribution och skalbarhet.
 
-#### Länkar
-- http://localhost:3000  (Web sida)
-- http://localhost:3000/fakta (JSON lista av 10 fakta sidan hämtar)
-
-##### Förutsättningar
+#### Förutsättningar
 - Docker
 - Docker Compose
 
-###### Klona repo och bygg applikationen
+##### Klona repo och bygg applikationen
 - git clone https://github.com/Chronicle3D/fakta-app
 - cd fakta-app
 - docker-compose up -d --build
@@ -31,6 +27,9 @@ En enkel webbapplikation som listar 10 fakta lagrade i en MongoDB-databas.
 - (optional. För att se logs, helst i en ny terminal) 
 - docker-compose logs -f 
 
+###### Länkar
+- http://localhost:3000  (Web sida)
+- http://localhost:3000/fakta (JSON lista av 10 fakta sidan hämtar)
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
