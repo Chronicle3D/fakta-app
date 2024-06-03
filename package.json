@@ -1,0 +1,14 @@
+{
+  "name": "docker",
+  "version": "1.0.0",
+  "description": "En enkel webbapplikation som listar 10 fakta lagrade i en MongoDB-databas.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongoose": "^6.12.9"
+  }
+}

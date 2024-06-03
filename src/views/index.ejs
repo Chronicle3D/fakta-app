@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fakta App</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #001f3f;
+            color: #7FDBFF;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0074D9;
+            border: none;
+            color: #7FDBFF;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Random Fakta</h1>
+        <p id="fakta-text"><%= fakta ? fakta.text : 'Klicka på knappen för att hämta en fakta' %></p>
+        <button onclick="generateFakta()">Generera Fakta</button>
+    </div>
+    <script>
+        async function generateFakta() {
+            const response = await fetch('/fakta/random');
+            const data = await response.json();
+            document.getElementById('fakta-text').innerText = data.text;
+        }
+    </script>
+</body>
+</html>
