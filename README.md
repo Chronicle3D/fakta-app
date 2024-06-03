@@ -10,31 +10,41 @@ En enkel webbapplikation som listar 10 fakta lagrade i en MongoDB-databas.
 - Docker
 - Docker Compose
 
-## Installation
+### Tekniska Val
+- Val av ramverk: Node.js och Express för deras enkelhet och snabba utvecklingscykel.
+- Databas: MongoDB för flexibilitet och enkel integration med Node.js via Mongoose.
+- Docker: För att containerisera applikationen och dess beroenden för enkel distribution och skalbarhet.
 
-### Förutsättningar
+#### Länkar
+- http://localhost:3000  (Web sida)
+- http://localhost:3000/fakta (JSON lista av 10 fakta sidan hämtar)
+
+##### Förutsättningar
 - Docker
 - Docker Compose
 
-### Klona repo och bygg applikationen
-```sh
-git clone <repo-url>
+###### Klona repo och bygg applikationen
+git clone https://github.com/Chronicle3D/fakta-app
 cd ..
 docker-compose up -d --build
 docker-compose exec web node src/seed.js
 - (optional. För att se logs, helst i en ny terminal) 
 docker-compose logs -f 
 
-####
-- http://localhost:3000  (Web sida)
-- http://localhost:3000/fakta (JSON lista av 10 fakta sidan hämtar)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-### Del 2 - Teori
+# Del 2 - Teori #
 
-#### Pris och kapacitet
+## Förbättringar
+- Autentisering och auktorisering
+- Frontend med ett ramverk som React
+- UI/UX förbättringar
 
-##### Containers vs VMs
+### Pris och kapacitet
+
+#### Containers vs VMs
 
 - **Containers**:
   - **Fördelar**:
@@ -53,7 +63,7 @@ docker-compose logs -f
     - Långsammare uppstartstid.
     - Mer resurskrävande.
 
-#### Lagring
+##### Lagring
 
 För att jämföra kostnader för lagring på Azure och en annan leverantör, kan du använda följande priser som exempel:
 
@@ -71,4 +81,3 @@ För 25 GB:
 
 **Sammanfattning**: Containers är ofta billigare och snabbare att hantera än VMs, men för stark isolation kan VMs vara att föredra. När det gäller lagring är Azure något billigare än AWS för både heta och arkiverade data.
 
-Med dessa steg och jämförelser har du nu en komplett lösning för din webbapplikation.
