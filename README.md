@@ -24,12 +24,12 @@ En enkel webbapplikation som listar 10 fakta lagrade i en MongoDB-databas.
 - Docker Compose
 
 ###### Klona repo och bygg applikationen
-git clone https://github.com/Chronicle3D/fakta-app
-cd ..
-docker-compose up -d --build
-docker-compose exec web node src/seed.js
+- git clone https://github.com/Chronicle3D/fakta-app
+- cd ..
+- docker-compose up -d --build
+- docker-compose exec web node src/seed.js
 - (optional. För att se logs, helst i en ny terminal) 
-docker-compose logs -f 
+- docker-compose logs -f 
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
